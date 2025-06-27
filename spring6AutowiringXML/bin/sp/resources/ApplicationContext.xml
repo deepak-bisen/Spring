@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<!-- setter DI --><!-- <bean class="sp.beans.Address" id="address" > <property name="hno" 
+		value="45"/> <property name="city" value="indore"/> <property name="pincode" 
+		value="456123"/> </bean> -->
+
+
+	<!-- Constructor DI -->
+	<bean class="sp.beans.AddressCons" id="address1">
+		<constructor-arg value="45" />
+		<constructor-arg value="indore" />
+		<constructor-arg value="456123" />
+	</bean>
+
+	<bean class="sp.beans.AddressCons" id="address2" autowire-candidate= "false">
+		<constructor-arg value="89" />
+		<constructor-arg value="khairi" />
+		<constructor-arg value="481337" />
+	</bean>
+
+	<!-- byName -->
+	<!-- <bean class="sp.beans.Student" id="stdId" autowire="byName"> <property 
+		name="name" value="deepak"/> <property name="rollno" value="1234"/> <property 
+		name="email" value="deepa@gmail.com"/> </bean> -->
+
+	<!-- byType -->
+	<!-- <bean class="sp.beans.Student" id="stdId" autowire="byType"> <property 
+		name="name" value="deepak"/> <property name="rollno" value="1234"/> <property 
+		name="email" value="deepa@gmail.com"/> </bean> -->
+
+	<!-- by Constructor -->
+	<bean class="sp.beans.StudentCons" id="stdId"
+		autowire="constructor">
+		<constructor-arg  value="123"  index ="0"/>
+		<constructor-arg  value="deepak" index ="1"/>
+		<constructor-arg  value="deepa@gmail.com" index ="2"/>
+	</bean>
+</beans>
