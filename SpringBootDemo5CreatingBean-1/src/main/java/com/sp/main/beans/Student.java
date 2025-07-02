@@ -1,0 +1,43 @@
+package com.sp.main.beans;
+
+public class Student {
+	private String name;
+	private String city;
+	private float marks;
+
+	public Student(String name, String city, float marks) {
+		this.name = name;
+		this.city = city;
+		this.marks = marks;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public float getMarks() {
+		return marks;
+	}
+
+	public void setMarks(float marks) {
+		this.marks = marks;
+	}
+
+	public void displayStdDetails() {
+		System.out.println("name : " + name);
+		System.out.println("city : " + city);
+		System.out.println("marks : " + marks);
+	}
+}
