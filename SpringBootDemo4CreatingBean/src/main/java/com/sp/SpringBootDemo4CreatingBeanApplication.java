@@ -1,0 +1,24 @@
+package com.sp;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class SpringBootDemo4CreatingBeanApplication implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootDemo4CreatingBeanApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		myClass().printMessage("Deepak");
+	}
+
+	@Bean
+	public MyClass myClass() {
+		return new MyClass();
+	}
+}
