@@ -1,8 +1,10 @@
 package com.sp.main.service;
 
-import org.springframework.stereotype.Service;
+import com.sp.main.entity.User;
 
-@Service
-public interface UserService  {
+public interface UserService {
 
+	public boolean registerUser(User user);
+
+	public User loginUser(String email, String password);
 }
