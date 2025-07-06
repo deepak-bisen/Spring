@@ -1,8 +1,18 @@
 package com.sp.main.service;
 
+import java.util.List;
+
 import com.sp.main.entity.Student;
 
 public interface StudentService {
 
 	public boolean addStudentDetails(Student std);
+	
+	public List<Student> getAllStdDetails();
+	
+	public Student getStudentById(long id);
+
+	public boolean updateStdDetails(Long id, float marks);
+	
+	public boolean deleteStdDetails(long id);
 }

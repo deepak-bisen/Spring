@@ -1,5 +1,7 @@
 package com.sp.main;
 
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -21,18 +23,64 @@ public class SpringBootWithDataJpaApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(SpringBootWithDataJpaApplication.class, args);
 		StudentService studentService = context.getBean(StudentServiceImpl.class);
+//------------------------------INSERT-------------------------------------------------
+//		Student student = new Student();
+//		student.setName("Deepak");
+//		student.setRollNo("0810CA6e4");
+//		student.setMarks(98.9f);
+//
+//		boolean status = studentService.addStudentDetails(student);
+//		if (status) {
+//			System.out.println("Student Inserted Successfully.");
+//		} else {
+//			System.out.println("Student Not Inserted.");
+//		}
 
-		Student student = new Student();
-		student.setName("Deepak");
-		student.setRollNo("0810CA6e4");
-		student.setMarks(98.9f);
+//------------------------------GET All Student--------------------------------------------
 
-		boolean status = studentService.addStudentDetails(student);
-		if (status) {
-			System.out.println("Student Inserted Successfully.");
-		} else {
-			System.out.println("Student Not Inserted.");
-		}
+//		List<Student> stdList = studentService.getAllStdDetails();
+
+//		for (Student std : stdList) {
+//			System.out.println("ID : " + std.getId());
+//			System.out.println("Name : " + std.getName());
+//			System.out.println("RollNo : " + std.getRollNo());
+//			System.out.println("Mark : " + std.getMarks());
+//
+//			System.out.println("--------------------------------------------------");
+//		}
+
+		
+		// ------------------------------GET Student by Id--------------------------------------------
+
+//		Student std = studentService.getStudentById(1L);
+//		if(std != null) {
+//			System.out.println("ID : " + std.getId());
+//			System.out.println("Name : " + std.getName());
+//			System.out.println("RollNo : " + std.getRollNo());
+//			System.out.println("Mark : " + std.getMarks());
+//
+//			System.out.println("--------------------------------------------------");
+//		}else
+//			System.out.println("Student not found for the Id.");
+
+
+		// ------------------------------Update Student Details--------------------------------------------
+
+//				boolean status = studentService.updateStdDetails(1L, 99.9f);
+//				if(status) {
+//					System.out.println("Student Details Updated Successfully.");
+//				}else
+//					System.out.println("Student Details Not Updated .");
+
+		// ------------------------------Delete Student Details--------------------------------------------
+
+				boolean status1 = studentService.deleteStdDetails(1L);
+				if(status1) {
+					System.out.println("Student Details Deleted Successfully.");
+				}else
+					System.out.println("Student Details Not Deleted.");
+
+	
 	}
 
 }
