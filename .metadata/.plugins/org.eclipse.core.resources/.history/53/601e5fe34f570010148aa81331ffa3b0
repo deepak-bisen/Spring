@@ -1,0 +1,23 @@
+package com.sp;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBootDemo4CreatingBeanApplication implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootDemo4CreatingBeanApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+	}
+
+	@Bean
+	public MyClass myClass() {
+		return new MyCLass();
+	}
+}

@@ -1,0 +1,42 @@
+package com.sp.main;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.sp.entity.User;
+
+/**
+ * Hello Hibernate!
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+		System.out.println("Hello Hibernate!");
+
+		User user = new User();
+		user.setName("tushar");
+		user.setEmail("tushar@gmail.com");
+		user.setPassword("tt123");
+		user.setGender("male");
+		user.setCity("balaghat");
+
+		Configuration cfg = new Configuration();
+		cfg.configure("com/sp/config/hibernate.cfg.xml");
+
+		SessionFactory sessionFactory = cfg.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+
+		try {
+			session.save(user);
+			transaction.commit();
+			System.out.println("User Details Added Successfully.");
+		} catch (Exception e) {
+			transaction.rollback();
+			e.printStackTrace();
+			System.out.println("User Details Not Added Ddue To Some Error.");
+		}
+	}
+}

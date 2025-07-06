@@ -1,0 +1,11 @@
+package com.sp.main.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.oauth2.client.ConditionalOnOAuth2ClientRegistrationProperties;
+
+@ConditionalOnOAuth2ClientRegistrationProperties
+public class UserDao {
+@Autowired
+	private JdbcTemplate jdbctemplate;
+
+}

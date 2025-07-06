@@ -1,0 +1,21 @@
+package com.sp.main;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.sp.main.entity.Student;
+import com.sp.main.service.StudentService;
+import com.sp.main.service.StudentServiceImpl;
+
+@SpringBootApplication
+public class SpringBootWithDataJpaApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(SpringBootWithDataJpaApplication.class, args);
+		StudentService studentService = context.getBean(StudentServiceImpl.class);
+		
+		Student student = new 
+	}
+
+}

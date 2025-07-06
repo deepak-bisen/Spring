@@ -1,0 +1,8 @@
+package com.sp.main.beans;
+
+public class Student {
+private String name;
+private String city;
+private float marks;
+
+}

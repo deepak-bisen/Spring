@@ -1,0 +1,5 @@
+package com.sp.main.repository;
+
+public class StudentRepository {
+
+}

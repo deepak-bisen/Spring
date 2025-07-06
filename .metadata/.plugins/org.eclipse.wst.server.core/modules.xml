@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:SpringWebMvc" serverId="Apache Tomcat v10.1.42 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:MVCDesign" serverId="Apache Tomcat v10.1.42 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:MavenWebApp" serverId="Apache Tomcat v10.1.42 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:SpringWebMvc2UsingAnnotations" serverId="Apache Tomcat v10.1.42 at localhost"/>
+</modules>

@@ -1,0 +1,28 @@
+package com.sp.main.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sp.main.entity.Student;
+import com.sp.main.repository.StudentRepository;
+
+@Service
+public class StudentServiceImpl implements StudentService {
+	@Autowired
+	private StudentRepository studentRepository;
+
+	@Override
+	public boolean addStudentDetails(Student std) {
+		boolean status = false;
+
+		try {
+			studentRepository.save(std);
+			status = true;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			status = false;
+		}
+		return status; 
+	}
+}

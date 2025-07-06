@@ -1,0 +1,5 @@
+package controller;
+@Web
+public class RegisterController extends HttpServlet{
+
+}

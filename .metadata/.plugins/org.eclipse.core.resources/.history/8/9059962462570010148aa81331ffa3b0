@@ -1,0 +1,5 @@
+package com.sp.main.config;
+
+public class AppConfig {
+
+}

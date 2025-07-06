@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Form</title>
+</head>
+<body>
+
+<h2>My Form</h2>
+<form action="submitForm" method="post">
+Name : <input type="text" name = "name"/><br>
+Email : <input type="text" name = "email"/><br>
+Phone No. : <input type="text" name= "phoneno"/><br>
+<input type="submit" />
+</form>
+
+</body>
+</html>

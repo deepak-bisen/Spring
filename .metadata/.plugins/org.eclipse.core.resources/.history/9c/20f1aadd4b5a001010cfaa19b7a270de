@@ -1,0 +1,32 @@
+package com.sp.main.entity;
+
+public class Student {
+	private String name;
+	private String rollNo;
+	private long marks;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getRollNo() {
+		return rollNo;
+	}
+
+	public void setRollNo(String rollNo) {
+		this.rollNo = rollNo;
+	}
+
+	public long getMarks() {
+		return marks;
+	}
+
+	public void setMarks(long marks) {
+		this.marks = marks;
+	}
+
+}

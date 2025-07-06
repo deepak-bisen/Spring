@@ -1,0 +1,14 @@
+package sp.main;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class MyController {
+	
+//@RequestMapping("/helloPage")
+	@GetMapping("/helloPage")
+	public ModelAndView openHelloPage() {
+		return null;
+	}
+}

@@ -1,0 +1,44 @@
+package com.sp.main;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.sp.main.dao.UserDao;
+import com.sp.main.entity.User;
+
+@SpringBootApplication
+public class SpringBootDemo5CrudApplication implements CommandLineRunner {
+	@Autowired
+	private UserDao userDAO;
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootDemo5CrudApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+//--------------------INSERTION---------------------------------------------------------------
+//		User user = new User("Deepak", "bisen1412@gmail.com", "male", "indore");
+//		boolean status = userDAO.insertUser(user);
+//		if (status) {
+//			System.out.println("User Inserted Successfully.");
+//		} else {
+//			System.out.println("User Insertion Failed.");
+//		}
+
+		
+//		-------------------------UPDATION------------------------------------------------------
+		User user = new User("Deepak", "bisen1412@gmail.com", "male", "balaghat");
+		userDAO.updateUser(user);
+//		boolean status = userDAO.insertUser(user);
+//		if (status) {
+//			System.out.println("User Updated Successfully.");
+//		} else {
+//			System.out.println("User Updation Failed.");
+//		}
+
+	}
+
+}

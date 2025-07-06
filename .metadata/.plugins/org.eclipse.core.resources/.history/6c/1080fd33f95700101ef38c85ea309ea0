@@ -1,0 +1,9 @@
+package com.sp.main.dao;
+
+import org.springframework.boot.autoconfigure.security.oauth2.client.ConditionalOnOAuth2ClientRegistrationProperties;
+
+@ConditionalOnOAuth2ClientRegistrationProperties
+public class UserDao {
+
+	private
+}

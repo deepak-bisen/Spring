@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 packages to &apos;spring6AutowiringXML/src&apos;&#x0D;&#x0A;- Original project: &apos;spring1&apos;&#x0D;&#x0A;- Destination element: &apos;spring6AutowiringXML/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     spring1/src/sp.resources&#x0D;&#x0A;     spring1/src/sp.beans&#x0D;&#x0A;     spring1/src/sp.main" description="Copy packages" destination="=spring6AutowiringXML/src" element1="/src&lt;sp.resources" element2="/src&lt;sp.beans" element3="/src&lt;sp.main" flags="589830" fragments="3" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1751023306060" version="1.0"/>
+</session>

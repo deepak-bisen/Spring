@@ -1,0 +1,3 @@
+spring.application.name=SpringBootDemoWepApp
+
+server.port= 8181

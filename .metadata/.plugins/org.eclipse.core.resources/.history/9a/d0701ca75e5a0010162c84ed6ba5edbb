@@ -1,0 +1,76 @@
+package com.sp.main.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.sp.main.SpringBootWithDataJpaApplication;
+import com.sp.main.entity.Student;
+import com.sp.main.repository.StudentRepository;
+
+@Service
+public class StudentServiceImpl implements StudentService {
+
+	private final SpringBootWithDataJpaApplication springBootWithDataJpaApplication;
+	@Autowired
+	private StudentRepository studentRepository;
+
+	StudentServiceImpl(SpringBootWithDataJpaApplication springBootWithDataJpaApplication) {
+		this.springBootWithDataJpaApplication = springBootWithDataJpaApplication;
+	}
+
+	@Override
+	public boolean addStudentDetails(Student std) {
+		boolean status = false;
+
+		try {
+			studentRepository.save(std);
+			status = true;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			status = false;
+		}
+		return status;
+	}
+
+	@Override
+	public List<Student> getAllStdDetails() {
+
+		return studentRepository.findAll();
+
+	}
+
+	@Override
+	public Student getStudentById(long id) {
+		Optional<Student> optional = studentRepository.findById(id);
+		if (optional.isPresent()) {
+			return optional.get();
+		}
+		return null;
+	}
+
+	@Override
+	public boolean updateStdDetails(Long id, float marks) {
+		Student student = getStudentById(id);
+		
+		if (student != null) {
+			student.setMarks(99.9f);
+			studentRepository.save(student);
+
+			return true;
+		}
+		return false;
+	}
+
+	
+	@Override
+	public boolean deleteStdDetails(long id) {
+
+	try {
+		studentRepository.deleteByid(id);
+	}
+		return false;
+	}
+}

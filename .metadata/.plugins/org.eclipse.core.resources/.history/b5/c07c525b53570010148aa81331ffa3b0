@@ -1,0 +1,5 @@
+package com.sp.main.beans;
+
+public class Student {
+
+}

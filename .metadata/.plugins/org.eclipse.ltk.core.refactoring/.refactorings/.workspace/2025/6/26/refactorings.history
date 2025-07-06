@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;spring7JdbcCrud&apos; to &apos;spring7JdbcTemplateCrud&apos;&#x0D;&#x0A;- Original element: &apos;spring7JdbcCrud&apos;&#x0D;&#x0A;- Renamed element: &apos;spring7JdbcCrud&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;spring7JdbcCrud&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=spring7JdbcCrud" name="spring7JdbcTemplateCrud" references="true" stamp="1751108412701" version="1.0"/>
+</session>

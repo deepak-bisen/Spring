@@ -1,0 +1,59 @@
+package com.sp.main;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.sp.entity.User;
+
+/**
+ * Hello Hibernate!
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+		System.out.println("Hello Hibernate!");
+
+		User user = new User();
+		user.setName("kartikey");
+		user.setEmail("kartikey@gmail.com");
+		user.setPassword("kk123");
+		user.setGender("male");
+		user.setCity("indore");
+
+		Configuration cfg = new Configuration();
+		cfg.configure("com/sp/config/hibernate.cfg.xml");
+
+		SessionFactory sessionFactory = cfg.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+
+		//----------------------INSERTION----------------------
+		try {
+			session.save(user);
+			transaction.commit();
+			System.out.println("User Details Added Successfully.");
+		} catch (Exception e) {
+			transaction.rollback();
+			e.printStackTrace();
+			System.out.println("User Details Not Added Ddue To Some Error.");
+		}
+		
+
+		//----------------------SELECT OPERATION----------------------
+		try {
+			User user1 = session.get(User, 1);
+			System.out.println(user1.getID());
+            System.out.println(user1.getName());
+            System.out.println(user1.getEmail());
+            System.out.println(user1.getPassword());
+            System.out.println(user1.getGender());
+            System.out.println(user1.getCity());
+		} catch (Exception e) {
+			transaction.rollback();
+			e.printStackTrace();
+			System.out.println("User Details Not Added Ddue To Some Error.");
+		}
+	}
+}

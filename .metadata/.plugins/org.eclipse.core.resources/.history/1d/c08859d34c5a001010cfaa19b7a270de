@@ -1,0 +1,16 @@
+package com.sp.main.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.sp.main.entity.Student;
+import com.sp.main.repository.StudentRepository;
+
+public class StudentServiceImpl implements StudentService {
+	@Override
+	public boolean addStudentDetails(Student std) {
+		@Autowired
+		private StudentRepository studentRepository;
+
+		return false;
+	}
+}

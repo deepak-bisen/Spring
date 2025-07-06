@@ -1,0 +1,26 @@
+package com.sp.main.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.oauth2.client.ConditionalOnOAuth2ClientRegistrationProperties;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.sp.main.entity.User;
+
+@ConditionalOnOAuth2ClientRegistrationProperties
+public class UserDao {
+	@Autowired
+	private JdbcTemplate jdbctemplate;
+
+	public boolean insertUSer(User user) {
+
+		boolean status = false;
+		try {
+			String insert_query = "INSERT INTO USERS(name, email,gender,city) VALUES(?,?,?,?)";
+			int count = jdbctemplate.update(insert_query, user.getName(), user.getEmail(), user.getGender(),
+					user.getCity());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+}

@@ -1,0 +1,36 @@
+package com.sp.config;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Controller;
+
+import com.sp.main.beans.Student;
+
+@Controller
+public class AppConfig {
+    @Bean
+    CommandLineRunner cmdLineRunner() {
+		return new CommandLineRunner() {
+
+			@Override
+			public void run(String... args) throws Exception {
+				stdBean1().displayStdDetails();
+
+				System.out.println("------------------------------");
+
+				stdBean2().displayStdDetails();
+			}
+		};
+	}
+
+	@Bean
+	Student stdBean1() {
+		return new Student("Deepak", "indore", 98.8f);
+	}
+
+	@Bean
+	Student stdBean2() {
+		return new Student("tuhsar", "khairi", 98.56f);
+	}
+
+}

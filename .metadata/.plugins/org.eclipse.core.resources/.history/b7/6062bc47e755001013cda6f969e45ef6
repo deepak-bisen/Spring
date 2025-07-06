@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>Register here</h3>
+	<form action="regForm" method="post">
+		name: <input type="text" name="name1" /><br> email: <input
+			type="text" name="email1" /> <br> password: <input type="text"
+			name="password1" /> contact: <input type="text" name="contact1" /> <input
+			type="submit" value="register" />
+	</form>
+</body>
+</html>

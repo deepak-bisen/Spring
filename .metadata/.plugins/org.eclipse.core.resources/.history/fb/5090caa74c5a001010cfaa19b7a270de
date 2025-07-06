@@ -1,0 +1,6 @@
+package com.sp.main.service;
+
+public interface StudentService {
+
+	public boolean addStudentDetails(Student std);
+}
