@@ -1,0 +1,8 @@
+package com.sp.main.service;
+
+import com.sp.main.entity.Student;
+
+public interface StudentService {
+
+	public boolean addStudentDetails(Student std);
+}
