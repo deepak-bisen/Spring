@@ -1,7 +1,11 @@
 package com.sp.main.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,5 +21,21 @@ public class UserController {
 	@PostMapping("/user")
 	public User addUserDetails(@RequestBody User user) {
 		return userService.createUser(user);
+	}
+
+	@GetMapping("/user")
+	public List<User> getAllUserDetails() {
+		return userService.getAllUssers();
+	}
+
+	@GetMapping("/user/{id}")
+	public ResponseEntity<User> getUserDetailsById(@PathVariable int id) {
+		User user = userService.getUserDetails(id).orElse(null);
+		if (user != null) {
+			return ResponseEntity.ok().body(user);
+		} else {
+			return ResponseEntity.notFound().build();
+		}
+
 	}
 }
