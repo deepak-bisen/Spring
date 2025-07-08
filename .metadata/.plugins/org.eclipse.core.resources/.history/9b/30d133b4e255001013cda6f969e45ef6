@@ -1,9 +1,0 @@
-package user;
-
-public class User {
-private Stirng name;
-private Stirng email;
-private Stirng password;
-private String contact;
-
-}
